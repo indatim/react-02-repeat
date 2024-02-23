@@ -1,3 +1,5 @@
+import Notification from "components/Notification/Notification";
+
 const Statistics = ({ good, neutral, bad, total, positive }) => (
   <>
     {total ? (
@@ -9,7 +11,7 @@ const Statistics = ({ good, neutral, bad, total, positive }) => (
         <li>Positive feedback: {positive}%</li>
       </ul>
     ) : (
-      <p>No feedback given</p>
+      <Notification message="There is no feedback" />
     )}
   </>
 );
